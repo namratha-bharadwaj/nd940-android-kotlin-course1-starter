@@ -1,14 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".AddShoe">
+    tools:context=".screens.shoeList.AddShoe">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <data>
+        <variable
+            name="shoeListingsViewModel"
+            type="com.udacity.shoestore.screens.shoeList.ShoeListViewModel" />
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <EditText
+            android:id="@+id/add_shoe_screen_shoe_name_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/add_shoe_screen_shoe_name_text"
+            android:inputType="textPersonName"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.136"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/add_shoe_screen_shoe_company_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/add_shoe_screen_shoe_company_text"
+            android:inputType="textPersonName"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/add_shoe_screen_shoe_name_et"
+            app:layout_constraintStart_toStartOf="@+id/add_shoe_screen_shoe_name_et"
+            app:layout_constraintTop_toBottomOf="@+id/add_shoe_screen_shoe_name_et"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/add_shoe_screen_shoe_size_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/add_shoe_screen_shoe_size_hint_text"
+            android:inputType="numberDecimal"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/add_shoe_screen_shoe_company_et"
+            app:layout_constraintStart_toStartOf="@+id/add_shoe_screen_shoe_company_et"
+            app:layout_constraintTop_toBottomOf="@+id/add_shoe_screen_shoe_company_et" />
+
+        <EditText
+            android:id="@+id/add_shoe_screen_shoe_description_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/add_shoe_screen_shoe_description_hint_text"
+            android:inputType="textLongMessage"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/add_shoe_screen_shoe_size_et"
+            app:layout_constraintStart_toStartOf="@+id/add_shoe_screen_shoe_size_et"
+            app:layout_constraintTop_toBottomOf="@+id/add_shoe_screen_shoe_size_et" />
+
+        <Button
+            android:id="@+id/add_shoe_screen_add_shoe_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/add_shoe_screen_add_shoe_btn_text"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.275"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_shoe_screen_shoe_description_et" />
+
+        <Button
+            android:id="@+id/add_shoe_screen_cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/add_shoe_screen_cancel_btn_text"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.479"
+            app:layout_constraintStart_toEndOf="@+id/add_shoe_screen_add_shoe_btn"
+            app:layout_constraintTop_toBottomOf="@+id/add_shoe_screen_shoe_description_et" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
