@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Margins -->
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">32dp</dimen>
+
+    <!-- Padding -->
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_large">32dp</dimen>
+
+    <!-- TV height -->
+    <dimen name="tv_min_height">48dp</dimen>
+
+    <!-- Text size -->
+    <dimen name="text_size_small">16sp</dimen>
+    <dimen name="text_size_medium">24sp</dimen>
+
+    <!-- card widths -->
+    <dimen name="card_width_small">141dp</dimen>
+    <dimen name="card_width_medium">214dp</dimen>
+
+
+
+</resources>

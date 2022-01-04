@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_margin="8dp">
+            android:layout_margin="@dimen/margin_small">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -24,15 +24,14 @@
 
                 <TextView
                     android:id="@+id/shoe_name_label_tv"
-                    android:layout_width="141dp"
+                    android:layout_width="@dimen/card_width_small"
                     android:layout_height="match_parent"
-                    android:text="shoe name: " />
+                    android:text="@string/add_shoe_screen_shoe_name_hint_text" />
 
                 <TextView
                     android:id="@+id/shoe_name_tv"
-                    android:layout_width="214dp"
-                    android:layout_height="match_parent"
-                    android:hint="shoe name" />
+                    android:layout_width="@dimen/card_width_medium"
+                    android:layout_height="match_parent" />
             </LinearLayout>
 
             <LinearLayout
@@ -42,15 +41,14 @@
 
                 <TextView
                     android:id="@+id/shoe_company_label_tv"
-                    android:layout_width="141dp"
+                    android:layout_width="@dimen/card_width_small"
                     android:layout_height="match_parent"
-                    android:text="shoe company: " />
+                    android:text="@string/add_shoe_screen_shoe_company_hint_text" />
 
                 <TextView
                     android:id="@+id/shoe_company_tv"
-                    android:layout_width="214dp"
-                    android:layout_height="match_parent"
-                    android:hint="shoe company" />
+                    android:layout_width="@dimen/card_width_medium"
+                    android:layout_height="match_parent" />
             </LinearLayout>
 
             <LinearLayout
@@ -60,15 +58,14 @@
 
                 <TextView
                     android:id="@+id/shoe_size_label_tv"
-                    android:layout_width="141dp"
+                    android:layout_width="@dimen/card_width_small"
                     android:layout_height="match_parent"
-                    android:text="shoe size: " />
+                    android:text="@string/add_shoe_screen_shoe_size_hint_text" />
 
                 <TextView
                     android:id="@+id/shoe_size_tv"
-                    android:layout_width="214dp"
-                    android:layout_height="match_parent"
-                    android:hint="shoe size" />
+                    android:layout_width="@dimen/card_width_medium"
+                    android:layout_height="match_parent" />
             </LinearLayout>
 
             <LinearLayout
@@ -78,15 +75,14 @@
 
                 <TextView
                     android:id="@+id/shoe_description_label_tv"
-                    android:layout_width="141dp"
+                    android:layout_width="@dimen/card_width_small"
                     android:layout_height="match_parent"
-                    android:text="Description: " />
+                    android:text="@string/add_shoe_screen_shoe_description_hint_text" />
 
                 <TextView
                     android:id="@+id/shoe_description_tv"
-                    android:layout_width="214dp"
-                    android:layout_height="match_parent"
-                    android:hint="Description" />
+                    android:layout_width="@dimen/card_width_medium"
+                    android:layout_height="match_parent" />
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>

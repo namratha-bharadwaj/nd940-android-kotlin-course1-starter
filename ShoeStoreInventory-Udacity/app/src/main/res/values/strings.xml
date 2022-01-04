@@ -6,14 +6,16 @@
     <string name="password_label">Password</string>
     <string name="login_btn_text">Login</string>
     <string name="signup_btn_text">New user? Sign up</string>
-    <string name="welcome_screen_heading_text">Welcome to Shoestore</string>
-    <string name="welcome_screen_body_text">Welcome to shoe store</string>
+    <string name="welcome_screen_heading_text">Welcome to Shoe store!</string>
+    <string name="welcome_screen_body_text">Welcome to your very own shoe store, where you can browze through a huge collection of shoes.</string>
     <string name="welcome_screen_continue_btn_txt">Continue</string>
     <string name="instructions_screen_heading_text">Instructions</string>
-    <string name="instructions_screen_body_text">Instructions to the Shoe store</string>
+    <string name="instructions_screen_step_1_text">1. Tap the \'+\' button on the next screen to add a new entry to your shoe list</string>
+    <string name="instructions_screen_step_2_text">2. To save your new entry, Tap the \"save\" button on the add shoe screen, otherwise,
+        tap \"cancel\", and you\'ll be back to the shoe list screen</string>
     <string name="instructions_screen_letsgo_btn_text">Let\'s go</string>
-    <string name="add_shoe_screen_shoe_name_text">Shoe name: </string>
-    <string name="add_shoe_screen_shoe_company_text">Shoe company</string>
+    <string name="add_shoe_screen_shoe_name_hint_text">Shoe name </string>
+    <string name="add_shoe_screen_shoe_company_hint_text">Shoe company</string>
     <string name="add_shoe_screen_shoe_size_hint_text">Shoe size</string>
     <string name="add_shoe_screen_shoe_description_hint_text">Description</string>
     <string name="add_shoe_screen_add_shoe_btn_text">Add Shoe</string>
