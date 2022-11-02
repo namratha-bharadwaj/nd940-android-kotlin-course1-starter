@@ -13,6 +13,11 @@
             type="com.udacity.shoestore.models.Shoe" />
     </data>
 
+    <!-- Constraint layout is used here since it helps improve UI performance over other layouts.
+    Its ease of design with drag and drop makes it suitable for smaller applications
+    such as this one. With Constraint layout the UI elements can be positioned in any order,
+    which is suitable for a layout like this one -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">

@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.325" />
         <entry key="app/src/main/res/layout/fragment_add_shoe.xml" value="0.13866120218579234" />
         <entry key="app/src/main/res/layout/fragment_instructions.xml" value="0.13223684210526315" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.13866120218579234" />

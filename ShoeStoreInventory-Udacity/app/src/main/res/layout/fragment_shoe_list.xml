@@ -4,6 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".screens.shoeList.ShoeListFragment">
 
+    <!-- Constraint layout is used here since it helps improve UI performance over other layouts.
+    Its ease of design with drag and drop makes it suitable for smaller applications
+    such as this one. With Constraint layout the UI elements can be positioned in any order,
+    which is suitable for a layout like this one -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -25,6 +30,10 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margin_medium"
             app:layout_constraintTop_toBottomOf="@id/show_list_screen_floating_action_btn">
+
+        <!-- Linear layout is used here since we need to display a vertical list of items.
+        It helps control the orientation of the items. Alternatively, recycler view can be used
+        which comes with a ScrollView out of the box, instead of linear layout as well.-->
 
             <LinearLayout
                 android:id="@+id/shoe_list_layout"

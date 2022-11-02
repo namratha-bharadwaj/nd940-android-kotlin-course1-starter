@@ -16,10 +16,7 @@ class ShoeLayout(context: Context?) : LinearLayout(context) {
     fun createShoe(shoe: Shoe) {
         binding.apply {
             addView(this.root)
-            shoe_name_tv.text = shoe.name
-            shoe_company_tv.text = shoe.company
-            shoe_size_tv.text = shoe.size.toString()
-            shoe_description_tv.text = shoe.description
+            shoeItem = shoe
         }
     }
 }
