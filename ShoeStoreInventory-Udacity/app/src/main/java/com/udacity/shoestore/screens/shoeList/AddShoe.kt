@@ -5,12 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentAddShoeBinding
-import com.udacity.shoestore.databinding.FragmentAddShoeBindingImpl
 import com.udacity.shoestore.models.Shoe
 
 /**
@@ -22,6 +22,7 @@ class AddShoe : Fragment() {
 
     private lateinit var binding: FragmentAddShoeBinding
     private val shoeListViewModel: ShoeListViewModel by activityViewModels()
+    private var newShoe = Shoe()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -36,15 +37,14 @@ class AddShoe : Fragment() {
         binding.lifecycleOwner = this
         binding.shoeListingsViewModel = shoeListViewModel
 
+        binding.newShoeItem = newShoe
+
         binding.addShoeScreenAddShoeBtn.setOnClickListener {
-            val shoeName = binding.addShoeScreenShoeNameEt.text.toString()
-            val shoeCompany = binding.addShoeScreenShoeCompanyEt.text.toString()
-            val shoeSize = binding.addShoeScreenShoeSizeEt.text.toString()
-            val description = binding.addShoeScreenShoeDescriptionEt.text.toString()
-            if (shoeName.isNotEmpty() && shoeCompany.isNotEmpty() && shoeSize.isNotEmpty() && description.isNotEmpty()) {
-                val shoeItem = Shoe(shoeName, shoeSize.toDouble(), shoeCompany, description)
-                shoeListViewModel.addShoe(shoeItem)
+            if (newShoe.name.isNotEmpty() && newShoe.company.isNotEmpty() && newShoe.size != 0.0 && newShoe.description.isNotEmpty()) {
+                shoeListViewModel.addShoe(newShoe)
                 findNavController().navigate(AddShoeDirections.actionAddShoeToShoeList())
+            } else {
+                Toast.makeText(context, "Enter all the details and try again!", Toast.LENGTH_SHORT).show()
             }
         }
 

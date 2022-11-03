@@ -5,12 +5,14 @@
     tools:context=".screens.shoeList.AddShoe">
 
     <data>
+        <import type="com.udacity.shoestore.Converter"/>
+        <variable
+            name="newShoeItem"
+            type="com.udacity.shoestore.models.Shoe" />
+
         <variable
             name="shoeListingsViewModel"
             type="com.udacity.shoestore.screens.shoeList.ShoeListViewModel" />
-        <variable
-            name="shoe"
-            type="com.udacity.shoestore.models.Shoe" />
     </data>
 
     <!-- Constraint layout is used here since it helps improve UI performance over other layouts.
@@ -29,6 +31,7 @@
             android:layout_marginStart="@dimen/margin_medium"
             android:layout_marginEnd="@dimen/margin_medium"
             android:hint="@string/add_shoe_screen_shoe_name_hint_text"
+            android:text="@={newShoeItem.name}"
             android:inputType="textPersonName"
             android:padding="@dimen/padding_small"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -45,6 +48,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/add_shoe_screen_shoe_company_hint_text"
             android:inputType="textPersonName"
+            android:text="@={newShoeItem.company}"
             android:padding="@dimen/padding_small"
             app:layout_constraintEnd_toEndOf="@+id/add_shoe_screen_shoe_name_et"
             app:layout_constraintStart_toStartOf="@+id/add_shoe_screen_shoe_name_et"
@@ -58,6 +62,7 @@
             android:hint="@string/add_shoe_screen_shoe_size_hint_text"
             android:inputType="numberDecimal"
             android:padding="@dimen/padding_small"
+            android:text="@={Converter.fromDouble(newShoeItem.size)}"
             app:layout_constraintEnd_toEndOf="@+id/add_shoe_screen_shoe_company_et"
             app:layout_constraintStart_toStartOf="@+id/add_shoe_screen_shoe_company_et"
             app:layout_constraintTop_toBottomOf="@+id/add_shoe_screen_shoe_company_et"
@@ -71,6 +76,7 @@
             android:inputType="textLongMessage"
             android:minHeight="@dimen/tv_min_height"
             android:padding="@dimen/padding_small"
+            android:text="@={newShoeItem.description}"
             app:layout_constraintEnd_toEndOf="@+id/add_shoe_screen_shoe_size_et"
             app:layout_constraintStart_toStartOf="@+id/add_shoe_screen_shoe_size_et"
             app:layout_constraintTop_toBottomOf="@+id/add_shoe_screen_shoe_size_et" />
